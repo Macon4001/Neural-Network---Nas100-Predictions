@@ -10,3 +10,10 @@ second_indexes_mult = input_vector[1] * weights_1[1]
 dot_product_1 = first_indexes_mult + second_indexes_mult
 
 print(f"The dot product is: {dot_product_1}")
+
+import numpy as np
+
+dot_product_1 = np.dot(input_vector, weights_1)
+
+print(f"The dot product Numpy is: {dot_product_1}")
+

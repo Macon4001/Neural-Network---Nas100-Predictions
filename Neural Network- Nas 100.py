@@ -1,19 +1,19 @@
 ## Neural Network for predicting Nas 100 Prices
 
-input_vector = [1.72, 1.23]
-weights_1 = [1.26, 0]
-weights_2 = [2.17, 0.32]
-
 import numpy as np
 
-# dot value aqusition for input_vector and weights_1 
-dot_product_1 = np.dot(input_vector, weights_1)
+input_vector=np.array([1.66, 1.56])
+weights_1 =np.array([1.45, -0.66])
+bias = np.array([0.0])
 
-print(f"The dot product Numpy is: {dot_product_1}")
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
 
-# dot value aqusition for input_vector and weights_1 
+def make_prediction(input_vector, weights,bias):
+    layer_1 = np.dot(input_vector,weights) + bias
+    layer_2 = sigmoid(layer_1)
+    return layer_2
 
-dot_product_2 = np.dot(input_vector, weights_2)
+prediction = make_prediction(input_vector, weights_1, bias)
 
-print(f"The dot product Numpy is: {dot_product_2}")
-
+print(f"The prediction result is: {prediction}")

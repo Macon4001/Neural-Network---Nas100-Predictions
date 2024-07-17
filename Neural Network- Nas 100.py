@@ -2,7 +2,7 @@
 
 import numpy as np
 
-input_vector=np.array([1.66, 1.56])
+input_vector=np.array([2, 1.5])
 weights_1 =np.array([1.45, -0.66])
 bias = np.array([0.0])
 
@@ -17,3 +17,9 @@ def make_prediction(input_vector, weights,bias):
 prediction = make_prediction(input_vector, weights_1, bias)
 
 print(f"The prediction result is: {prediction}")
+
+target = 0
+
+mse = np.square(prediction - target)
+
+print(f"Prediction: {prediction}; Error: {mse}")
